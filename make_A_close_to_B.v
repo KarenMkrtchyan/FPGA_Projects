@@ -91,10 +91,10 @@ always @(posedge Clk, posedge Reset)
 				begin
 					if (!F)
 						A <= A + 100;
-					if A > B
+					if (A > B)
 					begin
 						F <= 1;
-						A <= 10
+						A <= A - 10;
 					end
 				end
 				 
