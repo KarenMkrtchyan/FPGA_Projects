@@ -111,7 +111,7 @@ always @(posedge Clk, posedge Reset) //asynchronous active_high Reset
                  LS2C:                 
                     begin 
 					// state transitions
-					if (I==9) || (M[I][3] == 1) 
+					if ((I==9) || (M[I][3] == 1) )
 						state <= CBC;
 
 					//RTL
