@@ -104,8 +104,8 @@ always @(posedge Clk, posedge Reset) //asynchronous active_high Reset
                         if(Start) 
 							state <= LS2C;
 					// RTL
-					   	I <= 4'b0000;
-						J <= 4'b0000;
+					   	I <= 4b'0000;
+						J <= 4b'0000;
 					end
                        
                  LS2C:                 
