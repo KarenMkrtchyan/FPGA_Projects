@@ -134,11 +134,12 @@ always @(posedge Clk, posedge Reset) //asynchronous active_high Reset
 					//RTL
 					if (J != Jmax) begin
 						J <= J + 1;
-						I <= I + 1;
 						N[J] <= M[I];
-						if (I == 9)
-							I <= 0;
 					end
+					if (I == 9)
+						I <= 0;
+					else
+						I <= I + 1;
 					end
                                                
                  DONE:
