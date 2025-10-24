@@ -117,11 +117,11 @@ always @(posedge Clk, posedge Reset) //asynchronous active_high Reset
 					//RTL
 					if (M[I][3]) begin
 						N[J] <= M[I];
-						J <= J + 4b'0001;
+						J <= J + 4'b0001;
 					end
-					I <= I + 4b'0001;
+					I <= I + 4'b0001;
 					if (I == Imax)
-						I <= 4b'0000;
+						I <= 4'b0000;
 
                     end
 					
@@ -133,13 +133,13 @@ always @(posedge Clk, posedge Reset) //asynchronous active_high Reset
 
 					//RTL
 					if (J != Jmax) begin
-						J <= J + 1b'1;
+						J <= J + 1'b1;
 						N[J] <= M[I];
 					end
 					if (I == 9)
-						I <= 4b'0000;
+						I <= 4'b0000;
 					else
-						I <= I + 4b'0001;
+						I <= I + 4'b0001;
 					end
                                                
                  DONE:
