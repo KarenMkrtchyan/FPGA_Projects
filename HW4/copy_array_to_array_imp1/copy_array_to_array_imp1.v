@@ -123,6 +123,8 @@ always @(posedge Clk, posedge Reset) //asynchronous active_high Reset
 							N[J] <= M[I];
 							J <= 1;
 						end
+						if (I == Imax)
+							I <= 4'b0000;
                     end
 					
                  C221: // **********  TODO  ************** 
@@ -135,7 +137,7 @@ always @(posedge Clk, posedge Reset) //asynchronous active_high Reset
 						//RTL
 						N[J] <= M[I];
 						if (I==Imax)
-							I <= 0;
+							I <= 4'b0000;
 						else
 							I <= I + 1;
 						J <= J + 1;
@@ -149,7 +151,7 @@ always @(posedge Clk, posedge Reset) //asynchronous active_high Reset
 						//RTL
 						N[J] <= M[I];
 						if(I == Imax)
-							I <= 0;
+							I <= 4'b0000;
 						else
 							I <= I + 1;
 						J <= J + 1;
